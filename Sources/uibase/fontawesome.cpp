@@ -11,6 +11,6 @@ QFont FontAwesome::getFont(int pointSize, int weight, bool italic)
 
 void FontAwesome::loadFont()
 {
-    int id = QFontDatabase::addApplicationFont("fa-solid-900.ttf");
+    int id = QFontDatabase::addApplicationFont(":/fonts/fontawesome.ttf");
     m_FontName = (id == -1) ? "Arial" : QFontDatabase::applicationFontFamilies(id).at(0);
 }

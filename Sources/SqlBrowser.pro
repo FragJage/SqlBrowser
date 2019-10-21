@@ -28,7 +28,8 @@ SOURCES += \
         connectioneditor.cpp \
         connectionparameters.cpp \
         connectiontile.cpp \
-        flowlayout.cpp \
+        uibase/dropdownlist.cpp \
+        uibase/flowlayout.cpp \
         main.cpp \
         mainwindow.cpp \
         simplecrypt.cpp \
@@ -41,7 +42,8 @@ HEADERS += \
         connectioneditor.h \
         connectionparameters.h \
         connectiontile.h \
-        flowlayout.h \
+        uibase/dropdownlist.h \
+        uibase/flowlayout.h \
         mainwindow.h \
         simplecrypt.h \
         uibase/colorbutton.h \

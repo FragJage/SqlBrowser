@@ -29,6 +29,7 @@ class ConnectionEditor : public WindowBase
 
     private:
         ColorButton* m_BtnRemove;
+        ColorButton* m_BtnDuplicate;
         QVLineEdit* m_EditName;
         QVLineEdit* m_EditServer;
         QVLineEdit* m_EditUser;

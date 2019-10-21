@@ -51,24 +51,23 @@ void MainWindow::displayConnectionTile()
     QLayoutItem *child;
     while ((child = m_CnxLayout->takeAt(0)) != nullptr)
     {
-        //QObject::disconnect(child);
-        m_CnxLayout->removeItem(child);
+        QWidget* widget = child->widget();
+        QObject::disconnect(widget);
+        widget->hide();
+        delete child->widget();
         delete child;
     }
-    qDebug() << "Count Av : " << m_CnxLayout->count();
 
     list<ConnectionParameters*>::iterator it = m_ListCnx.begin();
     list<ConnectionParameters*>::iterator itEnd = m_ListCnx.end();
     while(it != itEnd)
     {
-        qDebug() << "Add : " << (*it)->name();
         ConnectionTile* tmp = new ConnectionTile(*it);
         QObject::connect(tmp, &ConnectionTile::clickModify, m_ConnectionEditor, &ConnectionEditor::modifyConnection);
         m_CnxLayout->addWidget(tmp);
         ++it;
     }
 
-    qDebug() << "Count Ap : " << m_CnxLayout->count();
     m_AddConnectionTile = new ConnectionTile();
     QObject::connect(m_AddConnectionTile, &ConnectionTile::clickNew, m_ConnectionEditor, &ConnectionEditor::addConnection);
     m_CnxLayout->addWidget(m_AddConnectionTile);

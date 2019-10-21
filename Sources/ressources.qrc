@@ -4,7 +4,7 @@
         <file alias="serveradd">images/serveradd.svg</file>
     </qresource>
     <qresource prefix="/fonts">
-        <file>fonts/fa-solid-900.ttf</file>
+        <file alias="fontawesome.ttf">fonts/fa-solid-900.ttf</file>
         <file>fonts/fa-brands-400.ttf</file>
         <file>fonts/fa-regular-400.ttf</file>
     </qresource>

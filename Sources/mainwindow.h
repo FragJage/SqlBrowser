@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QCloseEvent>
 #include <QSettings>
-#include "flowlayout.h"
+#include "uibase/flowlayout.h"
 #include "connectionparameters.h"
 #include "connectiontile.h"
 #include "connectioneditor.h"
